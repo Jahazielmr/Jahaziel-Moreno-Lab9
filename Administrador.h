@@ -14,7 +14,7 @@ class Administrador: public Usuario{
         int NumeroSeguro;
 
     public:
-        Administrador(string,string,string, int);
+        Administrador(string,string,int, string);
         Administrador();
 
         string getCargo();

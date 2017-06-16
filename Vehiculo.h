@@ -12,8 +12,10 @@ class Vehiculo{
         string modelo;
         string placa;
         double precio;
+        string estado;
+
     public:
-        Vehiculo(int,string,string,string,double);
+        Vehiculo(int,string,string,string,double, string);
         Vehiculo();
         int getYear();
         void setYear(int);
@@ -29,6 +31,9 @@ class Vehiculo{
 
         double getPrecio();
         void setPrecio(double);
+
+        string getEstado();
+        void setEstado(string);
 
 };
 #endif

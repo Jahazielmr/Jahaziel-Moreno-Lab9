@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-Administrador::Administrador(string nombre,string contra,string cargo, int NumeroSeguro){
+Administrador::Administrador(string nombre,string contra, int NumeroSeguro,string cargo){
     this-> nombre=nombre;
     this-> contra=contra;
     this-> cargo=cargo;

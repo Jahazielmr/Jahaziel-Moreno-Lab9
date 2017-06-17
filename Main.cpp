@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -17,6 +18,8 @@ vector<Vehiculo*> cargarTXTVehiculo(vector<Vehiculo*>);//Mandamos vehiculos comp
 void guardarTXTFactura(vector<Vehiculo*>, Usuario*, int);
 void guardarTXTVehiculo(Vehiculo*);
 void guardarTXTCliente(Usuario*);
+
+string generadorPlaca();
 
 int main(){
 
@@ -85,8 +88,7 @@ int main(){
 											cin>>marca;
 											cout<<"Ingrese Modelo: "<<endl;
 											cin>>modelo;
-											cout<<"Ingrese placa: "<<endl;
-											cin>>placa;
+											placa=generadorPlaca();
 											cout<<"Ingrese el precio del auto"<<endl;
 											cin>>precio;
 
@@ -407,4 +409,139 @@ vector<Vehiculo*> cargarTXTVehiculo(vector<Vehiculo*> personas){
 	}	
 
 	return personas;		
+}
+
+string generadorPlaca(){
+
+	stringstream ss;
+
+	string a="A",b="B",c="C",d="D",e="E",f="F",g="G",h="H",i="I",j="J",k="K",l="L",m="M",n="N",o="O",p="P",q="Q",r="R",s="S",t="T",u="U",v="V",w="W",x="X",y="Y",z="Z";
+
+	//llenar de letras
+	for (int i = 0; i < 3; ++i){
+
+		int random = rand()%26+1;
+
+		if(random==1){
+			ss<<a;
+
+		}
+		if(random==2){
+			ss<<b;
+
+		}
+		if(random==3){
+			ss<<c;
+
+		}
+		if(random==4){
+			ss<<d;
+
+		}
+		if(random==5){
+			ss<<e;
+
+		}
+		if(random==6){
+			ss<<f;
+
+		}
+		if(random==7){
+			ss<<g;
+
+		}
+		if(random==8){
+			ss<<h;
+
+		}
+		if(random==9){
+			ss<<i;
+
+		}
+		if(random==10){
+			ss<<j;
+
+		}
+		if(random==11){
+			ss<<k;
+
+		}
+
+		if(random==12){
+			ss<<l;
+
+		}
+		if(random==13){
+			ss<<m;
+
+		}
+		if(random==14){
+			ss<<n;
+
+		}
+		if(random==15){
+			ss<<o;
+
+		}
+		if(random==16){
+			ss<<p;
+
+		}
+		if(random==17){
+			ss<<q;
+
+		}
+		if(random==18){
+			ss<<r;
+
+		}
+		if(random==19){
+			ss<<s;
+
+		}
+		if(random==20){
+			ss<<t;
+
+		}
+		if(random==21){
+			ss<<u;
+
+		}
+		if(random==22){
+			ss<<v;
+
+		}
+		if(random==23){
+			ss<<w;
+
+		}
+		if(random==24){
+			ss<<x;
+
+		}
+		if(random==25){
+			ss<<y;
+
+		}
+		if(random==26){
+			ss<<z;
+
+		}
+
+	}
+
+	ss<<"-";
+
+	for (int i = 0; i < 4; ++i){
+
+		int random = rand()%26+1;
+
+		ss<<random;
+
+	}
+
+	
+	string placa=ss.str();
+
+	return placa;
 }

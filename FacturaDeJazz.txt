@@ -1,8 +1,0 @@
-Vehiculo numero: 0
- Año: 1997
-Marca: Toyota
-Modelo: American
-Placa: 34345345
-Precio: 345345
-----------------------------------------
-Total: 345345
